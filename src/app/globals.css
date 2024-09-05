@@ -67,3 +67,35 @@
     @apply bg-background text-foreground
   }
 }
+
+/* Default styles (optional) */
+iframe {
+  width: 100%; /* Initial width for smaller screens */
+  height: auto; /* Automatically adjust height */
+}
+
+/* Media queries for specific screen sizes */
+@media only screen and (min-width: 768px) { /* For screens wider than 768px (tablets and PCs) */
+  iframe {
+    max-width: 640px; /* Set a maximum width for larger screens */
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 767px) { /* For screens narrower than 767px (mobile devices) */
+  /* Optional adjustments for mobiles, like padding or font size */
+  iframe {
+    padding: 10px; /* Add some padding for better readability */
+  }
+}
+
+#proccess {
+  position: absolute;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  background-color: #911F27;
+  border-radius: 5px;
+  align-items: center;
+  left: 45%;
+}

@@ -27,51 +27,11 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import Link from "next/link"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
 import Image from 'next/image';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 export function HeroSection() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [experience, setExperience] = useState('');
-  const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('');
-  const [country, setCountry] = useState('');
-  const [role, setRole] = useState('');
-  const [success, setSuccess] = useState(false);
-  const [isSending, setIsSending] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSending(true);
-
-    try {
-      const res = await fetch('/api/sendemail/',{
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, phone, country, city, role, experience }),
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      setSuccess(true);
-    } else {
-      alert('Hubo un error al enviar el correo.');
-    }
-  } catch (error) {
-    console.error('Error al enviar el formulario:', error);
-    alert('Ocurrió un problema al enviar los datos. Inténtalo de nuevo.');
-  } finally {
-    setIsSending(false);  // Ocultar el mensaje de "Enviando..." al terminar
-  }
-};
 
 ////Error de mensaje
 const [showMessage, setShowMessage] = useState(false)
@@ -291,69 +251,16 @@ const [showMessage, setShowMessage] = useState(false)
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 rounded-lg p-4 bg-[#F8C794]">
-              <form onSubmit={handleSubmit} className="bg-[#FCF0C8] rounded-lg shadow-lg p-6 w-full m-auto">
-                <div className="grid gap-4">
-                  <div className="grid gap-2">
-                    <Label htmlFor="name">Nombres y Apellidos</Label>
-                    <Input className="bg-[#FFF2D7] text-[#911F27]" id="name" placeholder="Ingresa tu nombres y apellidos" value={name}
-                   onChange={(e) => setName(e.target.value)}
-                   required/>
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="email">Correo electrónico</Label>
-                    <Input className="bg-[#FFF2D7] text-[#911F27]" id="email" type="email" placeholder="Ingresa tu correo electrónico" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required/>
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="phone">Teléfono</Label>
-                    <Input className="bg-[#FFF2D7] text-[#911F27]" id="phone" type="tel" placeholder="Ingresa tu número de teléfono" 
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    required/>
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="country">País</Label>
-                    <Input className="bg-[#FFF2D7] text-[#911F27]" id="country" placeholder="Ingresa tu país" 
-                    value={country}
-                    onChange={(e) => setCountry(e.target.value)}
-                    required/>
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="city">Ciudad</Label>
-                    <Input className="bg-[#FFF2D7] text-[#911F27]" id="city" placeholder="Ingresa tu ciudad" 
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                    required/>
-                  </div>
-                  <div className="grid gap-2">
-                  <label htmlFor="role">Selecciona la categoria en donde te gustaria contribuir:</label>
-                  <select className="bg-[#FFF2D7] text-[#911F27]" id="role" value={role} onChange={(e) => setRole(e.target.value)} required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Paseador">Paseador</option>
-                    <option value="Cuidador">Cuidador</option>
-                    <option value="Veterinario">Veterinario</option>
-                    <option value="Adiestrador">Adiestrador</option>
-                    <option value="Comercio">Comercio</option>
-                  </select>
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="experience">Experiencia con mascotas</Label>
-                    <Textarea
-                      id="experience" className="bg-[#FFF2D7] text-[#911F27]"
-                      placeholder="Cuéntanos sobre tu experiencia en el ambito que has seleccionado (puedes ser muy conciso o amplio con lo que desees contar)" 
-                      value={experience}
-                      onChange={(e) => setExperience(e.target.value)}
-                      required/>
-                  </div>
-                  <Button type="submit" className="w-full bg-[#630A10] text-[#ffffff] ">
-                    Enviar solicitud
-                  </Button>
-                </div>
-                {isSending && <p className="m-auto">Espere un momento mientras enviamos el registro...</p>}
-                {success && <p className="m-auto">¡Registro enviado, gracias por haberte registrado!</p>}
-              </form>
+            <div>
+            <iframe className="mx-auto grid max-w-5xl items-center gap-6 py-12 rounded-lg p-4 bg-[#F8C794]" src="https://docs.google.com/forms/d/e/1FAIpQLSepEk2WW2St0hRFcOMe5CABK5J7bL0-SDLyIStmXd2JozQOuQ/viewform?usp=sf_link">Cargando...</iframe>
+            <Link id="proccess"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSepEk2WW2St0hRFcOMe5CABK5J7bL0-SDLyIStmXd2JozQOuQ/viewform?usp=sf_link"
+                    className="grid inline-flex h-10 items-center text-center justify-center rounded-md bg-[#911F27] px-8 text-sm font-medium text-[#ffffff] shadow transition-colors hover:bg-[#2b244f]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    prefetch={false}>
+                    Pantalla completa
+            </Link>
+            
+            </div>
             </div>
             {showMessage && (
         <div
