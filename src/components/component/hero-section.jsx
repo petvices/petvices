@@ -55,7 +55,7 @@ const [showMessage, setShowMessage] = useState(false)
         className="bg-[#F8C794] px-4 lg:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
         <Image
-                src="/images/loguito.png"
+                src="images/loguito.png"
                 width="50"
                 height="50"
                 alt="Image" 
@@ -92,7 +92,7 @@ const [showMessage, setShowMessage] = useState(false)
                 </div>
               </div>
               <Image
-                src="/images/inde.png"
+                src="images/inde.png"
                 width="500"
                 height="350"
                 alt="Hero"
@@ -119,7 +119,7 @@ const [showMessage, setShowMessage] = useState(false)
             <div
               className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <Image
-                src="/images/petvice.jpeg"
+                src="images/petvice.jpeg"
                 width="550"
                 height="310"
                 alt="Image"
@@ -196,7 +196,7 @@ const [showMessage, setShowMessage] = useState(false)
             <div className="flex items-center justify-center px-8">
             <div className="flex items-center justify-center px-8 m-auto">
               <Image className="m-auto"
-                src="/images/Partners.jpg"
+                src="images/Partners.jpg"
                 width="550"
                 height="510"
                 alt="Sponsor Logo"
