@@ -80,6 +80,10 @@ iframe {
     max-width: 640px; /* Set a maximum width for larger screens */
     height: 500px;
   }
+  proccess {
+    position: relative;
+    left: 5%;
+  }
 }
 
 @media only screen and (max-width: 767px) { /* For screens narrower than 767px (mobile devices) */
@@ -87,15 +91,22 @@ iframe {
   iframe {
     padding: 10px; /* Add some padding for better readability */
   }
+  #proccess {
+    position: relative;
+    left: 5%;
+  }
 }
 
 #proccess {
-  position: absolute;
+  position: relative;
   text-decoration: none;
   color: #ffffff;
-  padding: 10px 20px;
   background-color: #911F27;
-  border-radius: 5px;
-  align-items: center;
-  left: 45%;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+    display: grid;
 }
