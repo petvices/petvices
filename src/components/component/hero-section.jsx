@@ -81,13 +81,13 @@ const [showMessage, setShowMessage] = useState(false)
                     href="#"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-[#911F27] px-8 text-sm font-medium text-[#ffffff] shadow transition-colors hover:bg-[#2b244f]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}>
-                    Descargar iOS
+                    Proximamente iOS
                   </Link>
                   <Link
                     href="#"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-[#911F27] px-8 text-sm font-medium text-[#ffffff] shadow transition-colors hover:bg-[#2b244f]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}>
-                    Descargar Android
+                    Proximamente Android
                   </Link>
                 </div>
               </div>
@@ -255,7 +255,7 @@ const [showMessage, setShowMessage] = useState(false)
             <iframe className="mx-auto grid max-w-5xl items-center gap-6 py-12 rounded-lg p-4 bg-[#F8C794]" src="https://docs.google.com/forms/d/e/1FAIpQLSepEk2WW2St0hRFcOMe5CABK5J7bL0-SDLyIStmXd2JozQOuQ/viewform?usp=sf_link">Cargando...</iframe>
             <Link id="proccess"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSd0t9drwg83SEQPRtku__UrxLKB0H8gPd4LHapZMZwaPKic8g/viewform?usp=sf_link"
-                    className="grid inline-flex h-10 items-center text-center rounded-md bg-[#911F27] px-8 text-sm font-medium text-[#ffffff] shadow transition-colors hover:bg-[#2b244f]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex h-10 items-center text-center rounded-md bg-[#911F27] px-8 text-sm font-medium text-[#ffffff] shadow transition-colors hover:bg-[#2b244f]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}>
                     Pantalla completa
             </Link>
